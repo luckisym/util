@@ -27,7 +27,9 @@ void ll_item_free(struct l_list * list, struct ll_item *item);
 
 int l_list_add(struct l_list *list, void *data);
 void l_list_remove(struct l_list *list, void *data);
-
 int l_list_contains(struct l_list *list, void *data);
+int l_list_size(struct l_list *list);
+int l_list_is_empty(struct l_list *list);
+int l_list_traverse(struct l_list *list, int (*traverse_func) (void *item), int backwards);
 
 #endif
